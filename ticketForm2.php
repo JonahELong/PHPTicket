@@ -14,7 +14,7 @@ $ticketNumber = $_POST["ticketNum"];
 
 echo "Please Enter Ticket Names: <br>";
 
-echo "<form method=\"post\" action=\"ticketPrint.php\">";
+echo "<form method=\"post\" action=\"ticketForm3.php\">";
 
 for ($x = 1; $x <= $ticketNumber; $x++) {
     echo "<label for = \"name$x\"> Name On Ticket No.$x </label>";
