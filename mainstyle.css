@@ -1,0 +1,38 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h2 
+{
+    color: #333;
+}
+
+.ticket 
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ticket .name 
+{
+    font-weight: bold;
+    color: #333;
+}
+
+.ticket .code 
+{
+    color: #555;
+}
+
+.spacer 
+{
+    height: 20px;
+}
+
