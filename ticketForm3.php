@@ -10,22 +10,23 @@
 <body>
 
 <?php
-
 $ticketNumber = $_POST['ticketNum'];
 
-echo "Your Tickets: <br><br>";
+echo "<h1>Your Tickets:</h1>" . "<div class='spacer'></div>";
 
 for ($x = 1; $x <= $ticketNumber; $x++) {
-
     $ticketCode = rand(0, 9) . rand(0, 9) . rand(0, 9) . rand(0, 9) . rand(0, 9) . rand(0, 9);
-    echo "Ticket " . $x . ":<br>";
-    echo "Name: " . $_POST["name$x"] . "<br>";
-    echo "Code: " . $ticketCode . "<br>";
-
-    echo "<br><br>";
+    echo "<div class='ticket'>";
+    echo "<h2>Ticket " . $x . "</h2>";
+    echo "<p class='name'>Name: " . $_POST["name$x"] . "</p>";
+    echo "<p class='code'>Code: " . $ticketCode . "</p>";
+    echo "</div>";
+    if ($x < $ticketNumber) {
+        echo "<div class='spacer'></div>";
+    }
 }
 
 ?>
-    
+
 </body>
 </html>
