@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form method="post" action="ticketSys.php">
+<form method="post" action="ticketForm2.php">
 Number of Tickets: <input type="number" name="ticketNum">
 <input type="submit">
 </form>
