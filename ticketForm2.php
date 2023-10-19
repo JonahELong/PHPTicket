@@ -10,24 +10,22 @@
 <body>
 
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $ticketNumber = $_POST["ticketNum"];
 
-$ticketNumber = $_POST["ticketNum"];
-
-echo "Please Enter Ticket Names: <br>";
-
-echo "<form method=\"post\" action=\"ticketForm3.php\">";
-
-for ($x = 1; $x <= $ticketNumber; $x++) {
-    echo "<label for = \"name$x\"> Name On Ticket No.$x </label>";
-    echo "<input type=\"text\" name=\"name$x\">";
-    echo "<input type=\"hidden\" name=\"ticketNum\" value=\"$ticketNumber\">";
-
-    echo "<br>";
+    if ($ticketNumber >= 1 && $ticketNumber <= 5) {
+        for ($x = 1; $x <= $ticketNumber; $x++) {
+            $name = filter_input(INPUT_POST, "name$x", FILTER_SANITIZE_STRING);
+            if ($name !== false) {
+                echo "Name for Ticket No.$x: $name<br>";
+            } else {
+                echo "Invalid input for Ticket No.$x<br>";
+            }
+        }
+    } else {
+        echo "Invalid number of tickets. Please select a value between 1 and 5.";
+    }
 }
-
-echo "<input type=\"submit\">";
-echo "</form>";
-
 ?>
     
 </body>
